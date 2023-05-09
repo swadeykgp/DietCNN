@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_local_l40c1_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:19:20.200+0530" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_local_p2_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:18:42.977+0530" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_816_1_local_layer4_pool_0_0_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:18:36.401+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_q1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.569+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_d1' to 0." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.550+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_d1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.540+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_we1' to 0." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.531+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_we1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.521+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_ce1' to 0." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.503+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_ce1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.494+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_address1' to 0." projectName="adder_imgnet" solutionName="solution1" date="2022-11-09T19:17:23.488+0530" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

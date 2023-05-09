@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_1189_1_local_conv_17_0_0_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="imgnet_sym" solutionName="solution1" date="2022-11-11T20:34:13.042+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML41C2_q1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="imgnet_sym" solutionName="solution1" date="2022-11-11T20:34:08.994+0530" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="conv.cpp" path="/home/swarnava/Projects/Work/aiml/cvpr2023/code/IMGNET_RESNET/rimg_adder/conv.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cpp" path="/home/swarnava/Projects/Work/aiml/cvpr2023/code/IMGNET_RESNET/rimg_adder/testbench.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

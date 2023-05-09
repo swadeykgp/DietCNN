@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_local_l40c1_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:49:23.920+0530" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_local_p2_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:48:45.682+0530" type="Warning"/>
+        <logs message="WARNING: [RTMG 210-274] Memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_865_1_local_layer4_pool_0_0_RAM_AUTO_1R1W' is read-only, switch it to a ROM." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:48:39.348+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_q1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.596+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_d1' to 0." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.563+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_d1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.550+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_we1' to 0." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.538+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_we1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.527+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_ce1' to 0." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.515+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_ce1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.497+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_address1' to 0." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.480+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_address1' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.464+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'cnn_forward/ML40C1_q0' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.447+0530" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/ML40C1_d0' to 0." projectName="shift_imgnet" solutionName="solution1" date="2022-11-09T19:47:34.432+0530" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
