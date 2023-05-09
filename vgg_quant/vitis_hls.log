@@ -1,0 +1,1770 @@
+INFO: [HLS 200-10] Running '/home/swarnava/xillinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'swarnava' on host '01HW2125156' (Linux_x86_64 version 5.14.0-1051-oem) on Tue Nov 01 15:33:21 IST 2022
+INFO: [HLS 200-10] On os Ubuntu 22.04.1 LTS
+INFO: [HLS 200-10] In directory '/home/swarnava/Projects/Work/aiml/cvpr2023/code/CIFAR_VGG_FPGA/vgg_quant'
+Sourcing Tcl script '/home/swarnava/Projects/Work/aiml/cvpr2023/code/CIFAR_VGG_FPGA/vgg_quant/quantvgg/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project quantvgg 
+INFO: [HLS 200-10] Opening project '/home/swarnava/Projects/Work/aiml/cvpr2023/code/CIFAR_VGG_FPGA/vgg_quant/quantvgg'.
+INFO: [HLS 200-1510] Running: set_top cnn_forward 
+INFO: [HLS 200-1510] Running: add_files conv.cpp 
+INFO: [HLS 200-10] Adding design file 'conv.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench.cpp 
+INFO: [HLS 200-10] Adding test bench file 'testbench.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/swarnava/Projects/Work/aiml/cvpr2023/code/CIFAR_VGG_FPGA/vgg_quant/quantvgg/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7vx485t-ffg1157-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7vx485tffg1157-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.040 GB.
+INFO: [HLS 200-10] Analyzing design file 'conv.cpp' ... 
+WARNING: [HLS 207-5287] unused parameter 'max_val' (conv.cpp:39:53)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 105.21 seconds. CPU system time: 2.82 seconds. Elapsed time: 106.94 seconds; current allocated memory: 129.867 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c1(ap_uint<8> (*) [32][3], ap_uint<8> (*) [32][64], float*, float*)' (conv.cpp:58:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c1(ap_uint<8> (*) [32][3], ap_uint<8> (*) [32][64], float*, float*)' (conv.cpp:58:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c1(ap_uint<8> (*) [32][3], ap_uint<8> (*) [32][64], float*, float*)' (conv.cpp:58:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c2(ap_uint<8> (*) [16][64], ap_uint<8> (*) [16][128], float*, float*)' (conv.cpp:191:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c2(ap_uint<8> (*) [16][64], ap_uint<8> (*) [16][128], float*, float*)' (conv.cpp:191:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c2(ap_uint<8> (*) [16][64], ap_uint<8> (*) [16][128], float*, float*)' (conv.cpp:191:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c3(ap_uint<8> (*) [8][128], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:321:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c3(ap_uint<8> (*) [8][128], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:321:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c3(ap_uint<8> (*) [8][128], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:321:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c4(ap_uint<8> (*) [8][256], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:451:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c4(ap_uint<8> (*) [8][256], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:451:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c4(ap_uint<8> (*) [8][256], ap_uint<8> (*) [8][256], float*, float*)' (conv.cpp:451:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c5(ap_uint<8> (*) [4][256], ap_uint<8> (*) [4][512], float*, float*)' (conv.cpp:582:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c5(ap_uint<8> (*) [4][256], ap_uint<8> (*) [4][512], float*, float*)' (conv.cpp:582:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c5(ap_uint<8> (*) [4][256], ap_uint<8> (*) [4][512], float*, float*)' (conv.cpp:582:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c6(ap_uint<8> (*) [4][512], ap_uint<8> (*) [4][512], float*, float*, float*)' (conv.cpp:712:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c6(ap_uint<8> (*) [4][512], ap_uint<8> (*) [4][512], float*, float*, float*)' (conv.cpp:712:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c6(ap_uint<8> (*) [4][512], ap_uint<8> (*) [4][512], float*, float*, float*)' (conv.cpp:712:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c7(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:847:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c7(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:847:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c7(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:847:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'conv2D_c8(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:979:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'conv2D_c8(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:979:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'conv2D_c8(ap_uint<8> (*) [2][512], ap_uint<8> (*) [2][512], float*, float*, float*)' (conv.cpp:979:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__promote_2<int, int, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type, __gnu_cxx::__promote<int, std::__is_integer<int>::__value>::__type>::__type std::pow<int, int>(int, int)' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'calc_scale(float, float)' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'calc_zero_point(float, float, float)' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU1(ap_uint<8> (*) [32][64])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'maxpool_1(ap_uint<8> (*) [32][64], ap_uint<8> (*) [16][64])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU2(ap_uint<8> (*) [16][128])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'maxpool_2(ap_uint<8> (*) [16][128], ap_uint<8> (*) [8][128])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU3(ap_uint<8> (*) [8][256])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU4(ap_uint<8> (*) [8][256])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'maxpool_3(ap_uint<8> (*) [8][256], ap_uint<8> (*) [4][256])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU5(ap_uint<8> (*) [4][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU6(ap_uint<8> (*) [4][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'maxpool_4(ap_uint<8> (*) [4][512], ap_uint<8> (*) [2][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU7(ap_uint<8> (*) [2][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'ReLU8(ap_uint<8> (*) [2][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'maxpool_5(ap_uint<8> (*) [2][512], ap_uint<8> (*) [1][512])' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+INFO: [HLS 214-178] Inlining function 'fc1(float*, float*)' into 'cnn_forward(float const (*) [32][3], float*, float*, float*, float*)' (conv.cpp:1375:0)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:306:58)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:310:36)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:436:58)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:440:36)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:697:58)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:701:36)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:964:55)
+WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:1095:55)
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 9.89 seconds. CPU system time: 0.94 seconds. Elapsed time: 10.92 seconds; current allocated memory: 129.867 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 129.867 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 59.9 seconds. CPU system time: 0.43 seconds. Elapsed time: 60.4 seconds; current allocated memory: 562.016 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'conv2D_c1' into 'cnn_forward' (conv.cpp:1400) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 27.16 seconds. CPU system time: 0.03 seconds. Elapsed time: 27.21 seconds; current allocated memory: 635.422 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_994_4' (conv.cpp:994) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1006_8' (conv.cpp:1006) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1029_12' (conv.cpp:1029) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1047_13' (conv.cpp:1047) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1052_14' (conv.cpp:1052) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1065_15' (conv.cpp:1065) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1091_21' (conv.cpp:1079) in function 'conv2D_c8' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_863_4' (conv.cpp:863) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_875_8' (conv.cpp:875) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_898_12' (conv.cpp:898) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_916_13' (conv.cpp:916) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_921_14' (conv.cpp:921) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_934_15' (conv.cpp:934) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_960_21' (conv.cpp:948) in function 'conv2D_c7' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_730_4' (conv.cpp:730) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_742_8' (conv.cpp:742) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_765_12' (conv.cpp:765) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_783_13' (conv.cpp:783) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_788_14' (conv.cpp:788) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_801_15' (conv.cpp:801) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_827_21' (conv.cpp:815) in function 'conv2D_c6' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_597_4' (conv.cpp:597) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_609_8' (conv.cpp:609) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_632_12' (conv.cpp:632) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_650_13' (conv.cpp:650) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_655_14' (conv.cpp:655) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_668_15' (conv.cpp:668) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_694_21' (conv.cpp:682) in function 'conv2D_c5' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_466_4' (conv.cpp:466) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_478_8' (conv.cpp:478) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_501_12' (conv.cpp:501) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_519_13' (conv.cpp:519) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_524_14' (conv.cpp:524) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_537_15' (conv.cpp:537) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_564_21' (conv.cpp:551) in function 'conv2D_c4' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_336_4' (conv.cpp:336) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_348_8' (conv.cpp:348) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_371_12' (conv.cpp:371) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_389_13' (conv.cpp:389) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_394_14' (conv.cpp:394) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_407_15' (conv.cpp:407) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_433_21' (conv.cpp:421) in function 'conv2D_c3' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_207_4' (conv.cpp:207) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_219_8' (conv.cpp:219) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_242_12' (conv.cpp:242) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_260_13' (conv.cpp:260) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_265_14' (conv.cpp:265) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_278_15' (conv.cpp:278) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_303_21' (conv.cpp:292) in function 'conv2D_c2' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1118_3' (conv.cpp:1118) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1253_3' (conv.cpp:1253) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1131_3' (conv.cpp:1131) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1279_3' (conv.cpp:1279) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1144_3' (conv.cpp:1144) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1157_3' (conv.cpp:1157) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1306_3' (conv.cpp:1306) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1170_3' (conv.cpp:1170) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1183_3' (conv.cpp:1183) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1328_1' (conv.cpp:1328) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1197_3' (conv.cpp:1197) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1211_3' (conv.cpp:1211) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1354_1' (conv.cpp:1352) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1445_4' (conv.cpp:1445) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1235_2' (conv.cpp:1230) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_1456_5' (conv.cpp:1456) in function 'cnn_forward' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_1253_3' (conv.cpp:1253) in function 'cnn_forward' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_1279_3' (conv.cpp:1279) in function 'cnn_forward' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_1306_3' (conv.cpp:1306) in function 'cnn_forward' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_1328_1' (conv.cpp:1328) in function 'cnn_forward' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1255_4' (conv.cpp:1247) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1257_5' (conv.cpp:1247) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1281_4' (conv.cpp:1273) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1283_5' (conv.cpp:1273) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1308_4' (conv.cpp:1300) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1310_5' (conv.cpp:1300) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1334_4' (conv.cpp:1326) in function 'cnn_forward' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_1336_5' (conv.cpp:1326) in function 'cnn_forward' completely with a factor of 2.
+INFO: [XFORM 203-102] Partitioning array 'scale_x' (conv.cpp:1382) automatically.
+INFO: [XFORM 203-102] Partitioning array 'zp_x' (conv.cpp:1382) automatically.
+INFO: [XFORM 203-102] Partitioning array 'local_pool_5.V' (conv.cpp:1439) in dimension 1 automatically.
+INFO: [XFORM 203-102] Partitioning array 'local_pool_5.V.0' (conv.cpp:1439) in dimension 1 automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'N' in function 'conv2D_c8'.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'N' in function 'conv2D_c7'.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'P' in function 'conv2D_c5' (conv.cpp:701:36).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'P' in function 'conv2D_c3' (conv.cpp:440:36).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'P' in function 'conv2D_c2' (conv.cpp:310:36).
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1029:33) in function 'conv2D_c8'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1065:30) in function 'conv2D_c8'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1079:8) in function 'conv2D_c8'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c8'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:898:32) in function 'conv2D_c7'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:934:29) in function 'conv2D_c7'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:948:8) in function 'conv2D_c7'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c7'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:765:32) in function 'conv2D_c6'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:801:29) in function 'conv2D_c6'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:815:8) in function 'conv2D_c6'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c6'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:668:28) in function 'conv2D_c5'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:682:7) in function 'conv2D_c5'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c5'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:537:28) in function 'conv2D_c4'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:551:7) in function 'conv2D_c4'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c4'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:407:28) in function 'conv2D_c3'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:421:7) in function 'conv2D_c3'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c3'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:278:28) in function 'conv2D_c2'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:292:7) in function 'conv2D_c2'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock in function 'conv2D_c2'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1253:41) in function 'cnn_forward'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1279:41) in function 'cnn_forward'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1306:41) in function 'cnn_forward'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1328:33) in function 'cnn_forward'... converting 8 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1352:10) in function 'cnn_forward'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1411:11) to (conv.cpp:1302:42) in function 'cnn_forward'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1421:11) in function 'cnn_forward'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (conv.cpp:1431:11) in function 'cnn_forward'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D_c8' (conv.cpp:35:69)...15 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D_c7' (conv.cpp:35:68)...15 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'conv2D_c6' (conv.cpp:35:68)...15 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 12.19 seconds. CPU system time: 0.07 seconds. Elapsed time: 12.29 seconds; current allocated memory: 661.859 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_993_3' (conv.cpp:993:30) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_992_2' (conv.cpp:992:29) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_991_1' (conv.cpp:991:28) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1005_7' (conv.cpp:1005:31) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1004_6' (conv.cpp:1004:30) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1003_5' (conv.cpp:1003:29) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1028_11' (conv.cpp:1028:32) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1027_10' (conv.cpp:1027:31) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1026_9' (conv.cpp:1026:29) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1089_20' (conv.cpp:1079:8) in function 'conv2D_c8'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1087_19' (conv.cpp:1079:8) in function 'conv2D_c8'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_1081_16' (conv.cpp:1079:8) in function 'conv2D_c8' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_862_3' (conv.cpp:862:30) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_861_2' (conv.cpp:861:29) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_860_1' (conv.cpp:860:28) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_874_7' (conv.cpp:874:30) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_873_6' (conv.cpp:873:29) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_872_5' (conv.cpp:872:28) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_897_11' (conv.cpp:897:31) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_896_10' (conv.cpp:896:30) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_895_9' (conv.cpp:895:28) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_958_20' (conv.cpp:948:8) in function 'conv2D_c7'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_956_19' (conv.cpp:948:8) in function 'conv2D_c7'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_950_16' (conv.cpp:948:8) in function 'conv2D_c7' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_729_3' (conv.cpp:729:30) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_728_2' (conv.cpp:728:29) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_727_1' (conv.cpp:727:28) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_741_7' (conv.cpp:741:30) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_740_6' (conv.cpp:740:29) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_739_5' (conv.cpp:739:28) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_764_11' (conv.cpp:764:31) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_763_10' (conv.cpp:763:30) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_762_9' (conv.cpp:762:28) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_825_20' (conv.cpp:815:8) in function 'conv2D_c6'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_823_19' (conv.cpp:815:8) in function 'conv2D_c6'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_817_16' (conv.cpp:815:8) in function 'conv2D_c6' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_596_3' (conv.cpp:596:29) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_595_2' (conv.cpp:595:28) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_594_1' (conv.cpp:594:27) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_608_7' (conv.cpp:608:29) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_607_6' (conv.cpp:607:28) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_606_5' (conv.cpp:606:27) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_692_20' (conv.cpp:682:7) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_690_19' (conv.cpp:682:7) in function 'conv2D_c5'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_688_18' (conv.cpp:682:7) in function 'conv2D_c5' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_686_17' (conv.cpp:682:7) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_684_16' (conv.cpp:682:7) in function 'conv2D_c5'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_465_3' (conv.cpp:465:29) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_464_2' (conv.cpp:464:28) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_463_1' (conv.cpp:463:27) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_477_7' (conv.cpp:477:29) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_476_6' (conv.cpp:476:28) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_475_5' (conv.cpp:475:27) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_562_20' (conv.cpp:551:7) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_560_19' (conv.cpp:551:7) in function 'conv2D_c4'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_558_18' (conv.cpp:551:7) in function 'conv2D_c4' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_556_17' (conv.cpp:551:7) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_554_16' (conv.cpp:551:7) in function 'conv2D_c4'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_335_3' (conv.cpp:335:29) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_334_2' (conv.cpp:334:28) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_333_1' (conv.cpp:333:27) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_347_7' (conv.cpp:347:29) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_346_6' (conv.cpp:346:28) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_345_5' (conv.cpp:345:27) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_431_20' (conv.cpp:421:7) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_429_19' (conv.cpp:421:7) in function 'conv2D_c3'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_427_18' (conv.cpp:421:7) in function 'conv2D_c3' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_425_17' (conv.cpp:421:7) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_423_16' (conv.cpp:421:7) in function 'conv2D_c3'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_206_3' (conv.cpp:206:29) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_205_2' (conv.cpp:205:28) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_204_1' (conv.cpp:204:27) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_218_7' (conv.cpp:218:29) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_217_6' (conv.cpp:217:28) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_216_5' (conv.cpp:216:27) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_301_20' (conv.cpp:292:7) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_299_19' (conv.cpp:292:7) in function 'conv2D_c2'.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_297_18' (conv.cpp:292:7) in function 'conv2D_c2' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_295_17' (conv.cpp:292:7) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_293_16' (conv.cpp:292:7) in function 'conv2D_c2'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1251_2' (conv.cpp:1251:37) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1249_1' (conv.cpp:1249:33) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1277_2' (conv.cpp:1277:37) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1275_1' (conv.cpp:1275:33) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1304_2' (conv.cpp:1304:37) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1302_1' (conv.cpp:1302:33) in function 'cnn_forward'.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_1232_1' (conv.cpp:1230:10) in function 'cnn_forward'.
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:1100:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:968:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:836:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:701:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:571:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:440:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'P' (conv.cpp:310:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'MQ.V' (conv.cpp:1034:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:1070:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'MQ.V' (conv.cpp:903:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:939:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'MQ.V' (conv.cpp:770:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:806:12)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:673:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:542:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:412:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'BQ.V' (conv.cpp:283:11)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_pool_1.V' (conv.cpp:1263:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_pool_2.V' (conv.cpp:1289:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_pool_3.V' (conv.cpp:1316:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_pool_4.V' (conv.cpp:1342:36)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_pool_5.V[0][0]' (conv.cpp:1364:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_fc_1' (conv.cpp:1447:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'local_fc_2' (conv.cpp:1239:8)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 14.02 seconds. CPU system time: 0.22 seconds. Elapsed time: 14.28 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'cnn_forward' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'local_relu_1_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.33 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.46 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.64 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_260_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_260_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_260_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_265_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_265_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_265_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_278_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_278_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_278_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.38 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2_Pipeline_VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'P'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.59 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.61 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.81 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.82 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'local_conv_2_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.55 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.62 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.63 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.38 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_389_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_389_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_389_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_394_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_394_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_394_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_407_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_407_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_407_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3_Pipeline_VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.71 seconds. CPU system time: 0 seconds. Elapsed time: 0.71 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.04 seconds. CPU system time: 0 seconds. Elapsed time: 1.04 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.77 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.43 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_519_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_519_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_519_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.37 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.38 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_524_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_524_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_524_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_537_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_537_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_537_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4_Pipeline_VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.27 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'P'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.92 seconds. CPU system time: 0 seconds. Elapsed time: 0.93 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'local_conv_4'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 18, loop 'VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.77 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.77 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.67 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.36 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_650_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_650_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_650_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_655_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_655_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_655_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_668_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_668_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_668_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5_Pipeline_VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.215 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.215 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.42 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 1.216 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.216 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.03 seconds. CPU system time: 0 seconds. Elapsed time: 1.03 seconds; current allocated memory: 1.217 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.217 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.218 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.218 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, loop 'VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.219 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.42 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.219 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_783_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_783_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_783_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.54 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.220 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.220 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_788_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_788_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_788_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.220 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 1.220 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_801_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_801_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_801_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.26 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.221 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.34 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1.221 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6_Pipeline_VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.44 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.222 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.222 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'P'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.223 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.91 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.92 seconds; current allocated memory: 1.223 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1328_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'local_conv_6'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1328_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 17, loop 'VITIS_LOOP_1328_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.76 seconds. CPU system time: 0 seconds. Elapsed time: 1.77 seconds; current allocated memory: 1.224 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.224 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.225 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.225 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.226 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.226 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, loop 'VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.227 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.44 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.227 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_916_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_916_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_916_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.55 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.228 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.228 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_921_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_921_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_921_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 1.229 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.229 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_934_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_934_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_934_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.229 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.229 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7_Pipeline_VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 1.230 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.230 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'P'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.51 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.231 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.86 seconds. CPU system time: 0 seconds. Elapsed time: 0.87 seconds; current allocated memory: 1.231 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.59 seconds. CPU system time: 0 seconds. Elapsed time: 1.59 seconds; current allocated memory: 1.232 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.232 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.39 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.4 seconds; current allocated memory: 1.233 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.233 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, loop 'VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.235 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.43 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 1.235 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1047_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1047_13'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1047_13'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.52 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.236 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1052_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1052_14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_1052_14'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 1.236 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1065_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1065_15'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 32, loop 'VITIS_LOOP_1065_15'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.236 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.236 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8_Pipeline_VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'N'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 13, loop 'VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.5 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 1.237 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.237 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'conv2D_c8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.238 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.98 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.98 seconds; current allocated memory: 1.238 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1354_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-1457] Automatically inferring inferring RAM_1WNR storage type for array 'local_conv_7_V'. Use bind_storage pragma to override this type.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1354_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 9, loop 'VITIS_LOOP_1354_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.73 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.75 seconds; current allocated memory: 1.239 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.239 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1445_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1445_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 7, loop 'VITIS_LOOP_1445_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1.240 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 1.240 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'.
+WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' (loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('tmp_2_write_ln1237', conv.cpp:1237) of variable 'tmp', conv.cpp:1237 on local variable 'tmp' and 'load' operation ('tmp_2_load', conv.cpp:1232) on local variable 'tmp'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' (loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('tmp_2_write_ln1237', conv.cpp:1237) of variable 'tmp', conv.cpp:1237 on local variable 'tmp' and 'load' operation ('tmp_2_load', conv.cpp:1232) on local variable 'tmp'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' (loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('tmp_2_write_ln1237', conv.cpp:1237) of variable 'tmp', conv.cpp:1237 on local variable 'tmp' and 'load' operation ('tmp_2_load', conv.cpp:1232) on local variable 'tmp'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' (loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('tmp_2_write_ln1237', conv.cpp:1237) of variable 'tmp', conv.cpp:1237 on local variable 'tmp' and 'load' operation ('tmp_2_load', conv.cpp:1232) on local variable 'tmp'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 11, loop 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.241 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.241 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward_Pipeline_VITIS_LOOP_1456_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_1456_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_1456_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.241 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 1.241 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'cnn_forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 1.241 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3.45 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.47 seconds; current allocated memory: 1.241 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3' pipeline 'VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3' pipeline type 'loop pipeline'
+INFO: [SYN 201-210] Renamed object name 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3_local_relu_1_V_RAM_1WNR_AUTO_1R1W' to 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3_lobkb' due to the length limit 80
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitodp_32ns_64_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 8.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 8.32 seconds; current allocated memory: 1.243 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4' pipeline 'VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_204_1_VITIS_LOOP_206_3_VITIS_LOOP_207_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.97 seconds. CPU system time: 0.02 seconds. Elapsed time: 1 seconds; current allocated memory: 1.247 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8' pipeline 'VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_216_5_VITIS_LOOP_218_7_VITIS_LOOP_219_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.53 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.250 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_260_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_260_13' pipeline 'VITIS_LOOP_260_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_260_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.54 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.55 seconds; current allocated memory: 1.252 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_265_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_265_14' pipeline 'VITIS_LOOP_265_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_265_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.253 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_278_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_278_15' pipeline 'VITIS_LOOP_278_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_278_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.255 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2_Pipeline_VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c2_Pipeline_VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21' pipeline 'VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2_Pipeline_VITIS_LOOP_299_19_VITIS_LOOP_301_20_VITIS_LOOP_303_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.61 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.62 seconds; current allocated memory: 1.258 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.83 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.86 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3' pipeline 'VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitodp_32ns_64_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1275_1_VITIS_LOOP_1277_2_VITIS_LOOP_1279_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.48 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.5 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4' pipeline 'VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_333_1_VITIS_LOOP_335_3_VITIS_LOOP_336_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.01 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.02 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8' pipeline 'VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_345_5_VITIS_LOOP_347_7_VITIS_LOOP_348_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_389_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_389_13' pipeline 'VITIS_LOOP_389_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_389_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_394_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_394_14' pipeline 'VITIS_LOOP_394_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_394_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0 seconds. Elapsed time: 0.22 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_407_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_407_15' pipeline 'VITIS_LOOP_407_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_407_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.27 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3_Pipeline_VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c3_Pipeline_VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21' pipeline 'VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3_Pipeline_VITIS_LOOP_429_19_VITIS_LOOP_431_20_VITIS_LOOP_433_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.61 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.285 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0.07 seconds. Elapsed time: 1.08 seconds; current allocated memory: 1.409 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4' pipeline 'VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_463_1_VITIS_LOOP_465_3_VITIS_LOOP_466_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.48 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.49 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8' pipeline 'VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_475_5_VITIS_LOOP_477_7_VITIS_LOOP_478_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.58 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_519_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_519_13' pipeline 'VITIS_LOOP_519_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_519_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_524_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_524_14' pipeline 'VITIS_LOOP_524_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_524_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_537_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_537_15' pipeline 'VITIS_LOOP_537_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_537_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4_Pipeline_VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c4_Pipeline_VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21' pipeline 'VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4_Pipeline_VITIS_LOOP_560_19_VITIS_LOOP_562_20_VITIS_LOOP_564_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.64 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.67 seconds; current allocated memory: 1.343 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.31 seconds. CPU system time: 0.14 seconds. Elapsed time: 1.45 seconds; current allocated memory: 1.515 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3' pipeline 'VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitodp_32ns_64_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1302_1_VITIS_LOOP_1304_2_VITIS_LOOP_1306_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.58 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.6 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4' pipeline 'VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_594_1_VITIS_LOOP_596_3_VITIS_LOOP_597_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.07 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8' pipeline 'VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_606_5_VITIS_LOOP_608_7_VITIS_LOOP_609_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.59 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_650_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_650_13' pipeline 'VITIS_LOOP_650_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_650_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.58 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_655_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_655_14' pipeline 'VITIS_LOOP_655_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_655_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_668_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_668_15' pipeline 'VITIS_LOOP_668_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_668_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5_Pipeline_VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c5_Pipeline_VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21' pipeline 'VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5_Pipeline_VITIS_LOOP_690_19_VITIS_LOOP_692_20_VITIS_LOOP_694_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.77 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.89 seconds. CPU system time: 0.3 seconds. Elapsed time: 2.19 seconds; current allocated memory: 1.533 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4' pipeline 'VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_727_1_VITIS_LOOP_729_3_VITIS_LOOP_730_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.94 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.96 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8' pipeline 'VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_739_5_VITIS_LOOP_741_7_VITIS_LOOP_742_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.21 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.21 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12' pipeline 'VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_762_9_VITIS_LOOP_764_11_VITIS_LOOP_765_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.04 seconds; current allocated memory: 1.345 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_783_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_783_13' pipeline 'VITIS_LOOP_783_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_783_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.28 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.31 seconds; current allocated memory: 1.347 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_788_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_788_14' pipeline 'VITIS_LOOP_788_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_788_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.26 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 1.348 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_801_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_801_15' pipeline 'VITIS_LOOP_801_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_801_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 1.352 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6_Pipeline_VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c6_Pipeline_VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21' pipeline 'VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6_Pipeline_VITIS_LOOP_823_19_VITIS_LOOP_825_20_VITIS_LOOP_827_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.66 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 1.355 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c6/grp_fu_348_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c6/grp_fu_352_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.75 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.358 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1328_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1328_1' pipeline 'VITIS_LOOP_1328_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitodp_32ns_64_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1328_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.82 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.84 seconds; current allocated memory: 1.363 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4' pipeline 'VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_860_1_VITIS_LOOP_862_3_VITIS_LOOP_863_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.75 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.77 seconds; current allocated memory: 1.368 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8' pipeline 'VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_872_5_VITIS_LOOP_874_7_VITIS_LOOP_875_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.59 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.6 seconds; current allocated memory: 1.371 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12' pipeline 'VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_895_9_VITIS_LOOP_897_11_VITIS_LOOP_898_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.62 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.375 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_916_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_916_13' pipeline 'VITIS_LOOP_916_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_916_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.89 seconds. CPU system time: 0 seconds. Elapsed time: 0.9 seconds; current allocated memory: 1.379 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_921_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_921_14' pipeline 'VITIS_LOOP_921_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_921_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.22 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.25 seconds; current allocated memory: 1.384 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_934_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_934_15' pipeline 'VITIS_LOOP_934_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_934_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.385 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7_Pipeline_VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c7_Pipeline_VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21' pipeline 'VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7_Pipeline_VITIS_LOOP_956_19_VITIS_LOOP_958_20_VITIS_LOOP_960_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.53 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.387 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c7' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c7/grp_fu_348_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c7/grp_fu_352_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c7'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.390 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4' pipeline 'VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_991_1_VITIS_LOOP_993_3_VITIS_LOOP_994_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.54 seconds. CPU system time: 0 seconds. Elapsed time: 1.55 seconds; current allocated memory: 1.395 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8' pipeline 'VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1003_5_VITIS_LOOP_1005_7_VITIS_LOOP_1006_8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.56 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.57 seconds; current allocated memory: 1.399 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12' pipeline 'VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1026_9_VITIS_LOOP_1028_11_VITIS_LOOP_1029_12'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.6 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.62 seconds; current allocated memory: 1.403 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1047_13' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1047_13' pipeline 'VITIS_LOOP_1047_13' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1047_13'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.88 seconds. CPU system time: 0 seconds. Elapsed time: 0.89 seconds; current allocated memory: 1.407 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1052_14' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1052_14' pipeline 'VITIS_LOOP_1052_14' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1052_14'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.21 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 1.411 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1065_15' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1065_15' pipeline 'VITIS_LOOP_1065_15' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1065_15'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 1.413 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8_Pipeline_VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'conv2D_c8_Pipeline_VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21' pipeline 'VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8_Pipeline_VITIS_LOOP_1087_19_VITIS_LOOP_1089_20_VITIS_LOOP_1091_21'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.51 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.415 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'conv2D_c8' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c8/grp_fu_348_p_opcode' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'conv2D_c8/grp_fu_352_p_opcode' to 0.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'conv2D_c8'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.68 seconds; current allocated memory: 1.418 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1354_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1354_1' pipeline 'VITIS_LOOP_1354_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1354_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.66 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.67 seconds; current allocated memory: 1.423 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1445_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1445_4' pipeline 'VITIS_LOOP_1445_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1445_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.46 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.46 seconds; current allocated memory: 1.427 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' pipeline 'VITIS_LOOP_1232_1_VITIS_LOOP_1235_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.19 seconds; current allocated memory: 1.429 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward_Pipeline_VITIS_LOOP_1456_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'cnn_forward_Pipeline_VITIS_LOOP_1456_5' pipeline 'VITIS_LOOP_1456_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward_Pipeline_VITIS_LOOP_1456_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 1.430 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'cnn_forward' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_forward/N_c1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_forward/Ps' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_forward/M1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_forward/M2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'cnn_forward/M3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'cnn_forward' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'cnn_forward/N_c1_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'cnn_forward/N_c1_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'dcmp_64ns_64ns_1_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fcmp_32ns_32ns_1_2_no_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_10_no_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitodp_32ns_64_4_no_dsp_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'uitofp_32ns_32_4_no_dsp_1': 5 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'cnn_forward'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.59 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.64 seconds; current allocated memory: 1.432 GB.
+WARNING: [RTMG 210-274] Memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3_lobkb' is read-only, switch it to a ROM.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_1249_1_VITIS_LOOP_1251_2_VITIS_LOOP_1253_3_lobkb' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c2_M_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c2_B_6_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c2_BQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c3_M_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c3_B_5_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c3_BQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c4_M_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c4_B_4_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c5_M_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c5_B_3_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c5_BQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c6_B_2_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c6_MQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c7_B_1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c7_MQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_conv2D_c8_B_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_conv2D_c8_MQ_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-279] Implementing memory 'cnn_forward_cnn_forward_Pipeline_VITIS_LOOP_1232_1_VITIS_LOOP_1235_2_M_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_pool_1_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_conv_2_V_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_pool_2_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_conv_4_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_pool_3_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_conv_6_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_pool_4_V_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_conv_7_V_RAM_1WNR_AUTO_1R1W_ram (RAM_1WnR)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_conv_8_RAM_AUTO_0R0W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_fc_1_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'cnn_forward_local_fc_2_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 174.59 seconds. CPU system time: 1.24 seconds. Elapsed time: 175.88 seconds; current allocated memory: 1.645 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 4.19 seconds. CPU system time: 0.23 seconds. Elapsed time: 4.43 seconds; current allocated memory: 1.665 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for cnn_forward.
+INFO: [VLOG 209-307] Generating Verilog RTL for cnn_forward.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 126.72 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 515.03 seconds. CPU system time: 8.06 seconds. Elapsed time: 522.35 seconds; current allocated memory: 640.223 MB.
+INFO: [HLS 200-112] Total CPU user time: 516.24 seconds. Total CPU system time: 8.35 seconds. Total elapsed time: 523.41 seconds; peak allocated memory: 1.665 GB.
