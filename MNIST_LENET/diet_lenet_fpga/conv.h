@@ -1,0 +1,40 @@
+#define INP_IMAGE_SIZE 32
+#define INP_IMAGE_CHANNEL 1
+#define OUT_IMAGE_SIZE_C1 14
+#define OUT_IMAGE_SIZE_C2 5
+
+#define OUT_IMAGE_SIZE_F1_IN  400
+#define OUT_IMAGE_SIZE_F1_OUT 120
+
+#define OUT_IMAGE_SIZE_F2_IN  120
+#define OUT_IMAGE_SIZE_F2_OUT 84
+
+#define OUT_IMAGE_SIZE_F3_IN  84
+#define OUT_IMAGE_SIZE_F3_OUT  10
+
+#define OUT_SOFTMAX 10
+
+#define FILTER_IN_CHANNEL_C1 1
+#define FILTER_OUT_CHANNEL_C1 6
+#define FILTER_SIZE_C1 5
+#define STRIDE_C1 2
+
+
+#define FILTER_IN_CHANNEL_C2 6
+#define FILTER_OUT_CHANNEL_C2 16
+#define FILTER_SIZE_C2 5
+#define STRIDE_C2 2
+
+
+#define N_CLUSTERS 128
+#define N_CFILTERS 64
+#define N_FFILTERS 128
+#define SYM_STRIDE 1
+#define PATCH_SIZE (1, 1)
+
+
+#define  C1B  6
+#define  C2B  16
+#define  F1B  120
+#define  F2B  84
+#define  F3B  10

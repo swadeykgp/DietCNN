@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low." projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:38:02.965+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_663_2' (loop 'VITIS_LOOP_663_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('sum_write_ln664', conv.cpp:664) of variable 'sum', conv.cpp:664 on local variable 'sum' and 'load' operation ('sum_load', conv.cpp:664) on local variable 'sum'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.972+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_663_2' (loop 'VITIS_LOOP_663_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('sum_write_ln664', conv.cpp:664) of variable 'sum', conv.cpp:664 on local variable 'sum' and 'load' operation ('sum_load', conv.cpp:664) on local variable 'sum'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.967+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_663_2' (loop 'VITIS_LOOP_663_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('sum_write_ln664', conv.cpp:664) of variable 'sum', conv.cpp:664 on local variable 'sum' and 'load' operation ('sum_load', conv.cpp:664) on local variable 'sum'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.964+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_637_1_VITIS_LOOP_639_2' (loop 'VITIS_LOOP_637_1_VITIS_LOOP_639_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('tmp_1_write_ln641', conv.cpp:641) of variable 'tmp', conv.cpp:641 on local variable 'tmp' and 'load' operation ('tmp_1_load', conv.cpp:637) on local variable 'tmp'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.669+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_637_1_VITIS_LOOP_639_2' (loop 'VITIS_LOOP_637_1_VITIS_LOOP_639_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('tmp_1_write_ln641', conv.cpp:641) of variable 'tmp', conv.cpp:641 on local variable 'tmp' and 'load' operation ('tmp_1_load', conv.cpp:637) on local variable 'tmp'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.663+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-880] The II Violation in module 'cnn_forward_Pipeline_VITIS_LOOP_637_1_VITIS_LOOP_639_2' (loop 'VITIS_LOOP_637_1_VITIS_LOOP_639_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('tmp_1_write_ln641', conv.cpp:641) of variable 'tmp', conv.cpp:641 on local variable 'tmp' and 'load' operation ('tmp_1_load', conv.cpp:637) on local variable 'tmp'.&#xA;Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:44.660+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-885] The II Violation in module 'conv2D_c1_Pipeline_VITIS_LOOP_152_16_VITIS_LOOP_154_17_VITIS_LOOP_156_18' (loop 'VITIS_LOOP_152_16_VITIS_LOOP_154_17_VITIS_LOOP_156_18'): Unable to schedule 'load' operation ('N_0_load_14') on array 'N_0' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'N_0'.&#xA;Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:33.922+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_307_18' (conv.cpp:299:8) in function 'conv2D_c2' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.&#xA;Resolution: For help on HLS 200-960 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-960.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:28.382+0530" type="Warning"/>
+        <logs message="WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'M.1' in function 'fc2' (conv.cpp:556:21)." projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:28.110+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'Ps' (conv.cpp:679:0)&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=214-142.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:19.112+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'N_c1' (conv.cpp:679:0)&#xA;Resolution: For help on HLS 214-142 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=214-142.html" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:19.107+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 214-167] The program may have out of bound array access (conv.cpp:556:21)" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:19.105+0530" type="Warning"/>
+        <logs message="WARNING: [HLS 207-5287] unused parameter 'max_val' (conv.cpp:31:53)" projectName="quantlenet" solutionName="solution1" date="2022-10-20T14:37:14.805+0530" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
