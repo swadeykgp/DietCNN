@@ -1,0 +1,22 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../testbench.cpp in debug mode
+   Compiling ../../../../conv.cpp in debug mode
+   Generating csim.exe
+inp_image[0] = 59
+Start calling the conv1 HW function
+After calling the conv1 HW function
+8.78966e-07
+0.000163353
+7.29489e-05
+0.00125212
+1.50648e-08
+6.51252e-09
+6.51252e-09
+0.998507
+1.37684e-06
+1.74342e-06
+Output class is: 7
+Functionality pass
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
