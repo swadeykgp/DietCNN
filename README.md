@@ -8,12 +8,12 @@ DietCNN is a Python and PyTorch based Deep Neural Network library that provides 
 
 > Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination e.g. **CIFAR10-VGG Experiments**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/CIFAR_VGG/CIFAR10-VGG-All-Experiments.ipynb))
 
-## Table of Contents
+### Table of Contents
 
 1. [Setup](#Requirements-and-Installation)
 2. [Examples and Result Reproduction](#Examples-and-Result-Reproduction)
 
-## Setup
+### Setup
 
 Step 1: create basic virtual env:
 
@@ -24,9 +24,9 @@ source dietcnn/bin/activate
 pip install  -r dietcnn_base.txt
 
 ```
-## Examples and Result Reproduction
+### Examples and Result Reproduction
 
-### FPGA Results
+#### FPGA Results
 
 cd MNIST_LENET
 
@@ -47,14 +47,14 @@ The same flow applies to CIFAR_VGG and IMGNET_RESNET
 Each directory has a notebook <Dataset,Network>-All-Experiments.ipynb to reproduce the experiments
 
 
-### Experiments with Sigmoid:
+#### Experiments with Sigmoid:
 
 cd lenet_model_sig_supp_sec1.1
 python lut_utils_sig.py
 python  mnist_eval.py 2 0
 
 
-### Retraining mode
+#### Retraining mode
 
 cd retraining
 
@@ -64,7 +64,7 @@ python retraining_lenet_fc.py
 (set PARALLEL based on your system cores)
 
 
-### Inference on discretized images:
+#### Inference on discretized images:
 
 cd discretized_inference
 
@@ -82,7 +82,7 @@ python imagenet_symencodetest.py
 Set dataset path, desired #symbol parameters e.g. 2048, 512
 Try to encode first, then decode test.
 
-### Citation
+#### Citation
 
 If you find our work useful, please consider citing:
 
@@ -95,11 +95,11 @@ year = {2023}
 }
 ```
 
-## License
+### License
 
 This code is released under MIT license.
 
-## Acknowledgments
+### Acknowledgments
 
 Our code was built using several existing GitHub repositories. I will add those soon...
 
