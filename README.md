@@ -1,10 +1,10 @@
-#DietCNN
+# DietCNN
 
-## DietCNN is a Python and PyTorch based Deep Neural Network library that provides *multiplication-free* CNN inference. Pre-trained CNN models can be *transformed* or re-trained to make those multiplication-free. It works best for *embedded systems*, that is with smaller networks and datasets. Direct benefits are: *inference energy* reduction and *model size* reduction. 
+DietCNN is a Python and PyTorch based Deep Neural Network library that provides *multiplication-free* CNN inference. Pre-trained CNN models can be *transformed* or re-trained to make those multiplication-free. It works best for *embedded systems*, that is with smaller networks and datasets. Direct benefits are: *inference energy* reduction and *model size* reduction. 
 
 
 
-# Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination.
+# Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination e.g. **CIFAR10-VGG Experiments**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/CIFAR_VGG/CIFAR10-VGG-All-Experiments.ipynb))
 
 ## Table of Contents
 
