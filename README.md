@@ -4,7 +4,7 @@ DietCNN is a Python and PyTorch based Deep Neural Network library that provides 
 
 
 
-# Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination e.g. **CIFAR10-VGG Experiments**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/CIFAR_VGG/CIFAR10-VGG-All-Experiments.ipynb))
+== Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination e.g. **CIFAR10-VGG Experiments**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/CIFAR_VGG/CIFAR10-VGG-All-Experiments.ipynb)) ==
 
 ## Table of Contents
 
