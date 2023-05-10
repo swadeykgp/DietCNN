@@ -1,10 +1,10 @@
 #DietCNN
 
-DietCNN is a Python and PyTorch based Deep Neural Network library that provides *multiplication-free* CNN inference. Pre-trained CNN models can be *transformed* or re-trained to make those multiplication-free. It works best for *embedded systems*, that is with smaller networks and datasets. Direct benefits are: *inference energy* reduction and *model size* reduction. 
+## DietCNN is a Python and PyTorch based Deep Neural Network library that provides *multiplication-free* CNN inference. Pre-trained CNN models can be *transformed* or re-trained to make those multiplication-free. It works best for *embedded systems*, that is with smaller networks and datasets. Direct benefits are: *inference energy* reduction and *model size* reduction. 
 
 
 
-# Please have a look at  "A-Sample-Code-Walkthrough-MNIST-LeNet-full.pdf" , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination.
+# Please have a look at  **A-Sample-Code-Walkthrough-MNIST-LeNet-full**  ([code](https://github.com/swadeykgp/DietCNN/blob/main/MNIST_LENET/MNIST-LeNet-All-Experiments.ipynb)) , for an overall idea of how a network is converted to DietCNN, end-to-end. This also covers all the experiments. There is a similar file for each of the dataset-network combination.
 
 ## Table of Contents
 
@@ -85,11 +85,11 @@ Try to encode first, then decode test.
 If you find our work useful, please consider citing:
 
 ```bibtex
-@inproceedings{dey2022symdnn,
-title={SymDNN: Simple & Effective Adversarial Robustness for Embedded Systems},
-author={Dey, Swarnava and Dasgupta, Pallab and Chakrabarti, Partha P},
-booktitle = {IEEE Conference on Computer Vision and Pattern Recognition Workshop (CVPRW)},
-year = {2022}
+@article{dey2023dietcnn,
+author = {Swarnava Dey and Pallab Dasgupta and Partha P Chakrabarti},
+journal = {ArXiv preprint arXiv:2305.05274},
+title = {DietCNN: Multiplication-free Inference for Quantized CNNs},
+year = {2023}
 }
 ```
 
